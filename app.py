@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 app = Flask(__name__, static_folder="dist")
 # habilitar CORS para permitir solicitudes desde el frontend
-CORS(app, origins=["https://full-stack-ajsy.onrender.com", "http://localhost:3000"])
+CORS(app,methods=["GET", "POST"] , origins=["https://full-stack-ajsy.onrender.com", "http://localhost:3000"])
 # configuración de la base de datos (SQLite en este caso)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///comunidad.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
